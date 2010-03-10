@@ -451,7 +451,7 @@ Date:   Sat Aug 25 23:32:54 2007 +0200
     Kill unused macro definition.
 
 commit 3c3b47bf6f080ddb700886de3e5bfa42c2f0774e
-Merge: 9f86614... 32d2d33...
+Merge: 9f86614 32d2d33
 Author: Dodji Seketeli <dodji@openedhand.com>
 Date:   Sat Aug 11 23:09:50 2007 +0200
 
@@ -623,7 +623,7 @@ Date:   Wed Apr 4 17:05:13 2007 -0700
     Version bump: 1.2.8
 
 commit 224fb6403a328e70b370540cc5cefd74421fafac
-Merge: e7a59cf... 0fbb37c...
+Merge: e7a59cf 0fbb37c
 Author: Matthieu Herrb <matthieu@roadrock.(none)>
 Date:   Tue Apr 3 16:05:48 2007 +0200
 
@@ -751,7 +751,7 @@ Date:   Thu Oct 5 18:12:50 2006 -0700
     --disable-builtins should not force off all bitmap support
 
 commit 264df52d24f585915e0d9823d5f087cf23e3fc75
-Merge: 0fb55cb... d896c3e...
+Merge: 0fb55cb d896c3e
 Author: Alan Coopersmith <alan.coopersmith@sun.com>
 Date:   Fri Sep 22 11:36:43 2006 -0700
 
