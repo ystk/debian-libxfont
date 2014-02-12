@@ -1,3 +1,77 @@
+libxfont (1:1.4.5-2) unstable; urgency=low
+
+  * Ease sync for Ubuntu: strip -Bsymbolic-functions from LDFLAGS
+    (LP: #992745).
+
+ -- Cyril Brulebois <kibi@debian.org>  Thu, 03 May 2012 19:59:46 +0200
+
+libxfont (1:1.4.5-1) unstable; urgency=low
+
+  [ Cyril Brulebois ]
+  * New upstream release.
+  * Switch to dh:
+    - Bump debhelper build-dep and compat.
+    - Rewrite debian/rules, using autoreconf and quilt sequences.
+    - Adjust build dependencies accordingly.
+    - Use build-main and build-udeb as build directories.
+    - Adjust .install accordingly.
+  * Remove xsfbs accordingly.
+  * Add support for hardened build flags through dpkg-buildflags, based
+    on a patch by Moritz Muehlenhoff, thanks! (Closes: #654154).
+
+  [ Julien Cristau ]
+  * Remove David Nusinow from Uploaders.
+
+ -- Cyril Brulebois <kibi@debian.org>  Sun, 04 Mar 2012 09:24:59 +0000
+
+libxfont (1:1.4.4-1) unstable; urgency=high
+
+  [ Julien Cristau ]
+  * Drop Pre-Depends on x11-common (only needed for upgrades from the
+    monolith) and Replaces on xlibs-static-dev (hasn't existed in forever).
+
+  [ Cyril Brulebois ]
+  * New upstream release:
+    - LZW decompress: fix for CVE-2011-2895. From the commit message:
+      “Specially crafted LZW stream can crash an application using libXfont
+       that is used to open untrusted font files.  With X server, this may
+       allow privilege escalation when exploited.”
+  * Set urgency to “high” accordingly.
+  * Update debian/copyright from upstream COPYING.
+  * Bump xorg-sgml-doctools build-dep.
+  * Drop xorg.css from .install, no longer shipped upstream.
+
+ -- Cyril Brulebois <kibi@debian.org>  Thu, 11 Aug 2011 11:17:16 +0200
+
+libxfont (1:1.4.3-2) unstable; urgency=low
+
+  * Upload to unstable.
+
+ -- Cyril Brulebois <kibi@debian.org>  Sat, 05 Feb 2011 11:48:49 +0100
+
+libxfont (1:1.4.3-1) experimental; urgency=low
+
+  * New upstream release.
+  * Bump xutils-dev build-dep for new macros.
+  * Add xmlto, xorg-sgml-doctools, and w3m build-dep for the doc.
+  * Pass --with-xmlto and --without-fop for the regular build (we want
+    html and txt only). Disable both for the udeb build.
+  * Tweak doc filenames, and handle that through dh_install.
+  * Add --fail-missing -XlibXfont.la for the second dh_install call (the
+    udeb one), for additional safety.
+
+ -- Cyril Brulebois <kibi@debian.org>  Fri, 19 Nov 2010 01:17:48 +0100
+
+libxfont (1:1.4.2-1) experimental; urgency=low
+
+  * New upstream release.
+  * Bump xutils-dev build-dep for new xorg-macros.
+  * Bump shlibs for register_fpe_functions().
+  * Update debian/copyright.
+  * Bump Standards-Version to 3.9.0, no changes.
+
+ -- Julien Cristau <jcristau@debian.org>  Wed, 07 Jul 2010 18:25:15 +0100
+
 libxfont (1:1.4.1-2) unstable; urgency=low
 
   [ Julien Cristau ]

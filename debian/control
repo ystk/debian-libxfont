@@ -2,9 +2,11 @@ Source: libxfont
 Section: x11
 Priority: optional
 Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
-Uploaders: David Nusinow <dnusinow@debian.org>, Drew Parsons <dparsons@debian.org>, Cyril Brulebois <kibi@debian.org>
+Uploaders: Drew Parsons <dparsons@debian.org>, Cyril Brulebois <kibi@debian.org>
 Build-Depends:
- debhelper (>= 5),
+ debhelper (>= 8),
+ dh-autoreconf,
+ quilt,
  pkg-config,
  libfontenc-dev (>= 1:1.0.5-2),
  x11proto-core-dev,
@@ -13,15 +15,10 @@ Build-Depends:
  libfreetype6-dev,
  zlib1g-dev,
  libbz2-dev,
- quilt,
- xutils-dev (>= 1:7.5~1),
- autoconf,
- automake,
- libtool,
+ xutils-dev (>= 1:7.5+4),
 # devel-docs
- xmlto,
- lynx,
-Standards-Version: 3.8.4
+ xmlto, xorg-sgml-doctools (>= 1:1.7), w3m,
+Standards-Version: 3.9.0
 Vcs-Git: git://git.debian.org/git/pkg-xorg/lib/libxfont
 Vcs-Browser:  http://git.debian.org/?p=pkg-xorg/lib/libxfont.git
 
@@ -36,8 +33,6 @@ Description: X11 font rasterisation library
  .
  More information about X.Org can be found at:
  <URL:http://www.X.org>
- <URL:http://xorg.freedesktop.org>
- <URL:http://lists.freedesktop.org/mailman/listinfo/xorg>
  .
  This module can be found at
  git://anongit.freedesktop.org/git/xorg/lib/libXfont
@@ -64,8 +59,6 @@ Description: X11 font rasterisation library (debug package)
  .
  More information about X.Org can be found at:
  <URL:http://www.X.org>
- <URL:http://xorg.freedesktop.org>
- <URL:http://lists.freedesktop.org/mailman/listinfo/xorg>
  .
  This module can be found at
  git://anongit.freedesktop.org/git/xorg/lib/libXfont
@@ -74,8 +67,6 @@ Package: libxfont-dev
 Section: libdevel
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, libxfont1 (= ${binary:Version}), libx11-dev, x11proto-core-dev, x11proto-fonts-dev, libfreetype6-dev, libfontenc-dev (>= 1:1.0.1-1)
-Pre-Depends: x11-common (>= 1:7.0.0)
-Replaces: xlibs-static-dev (<< 6.8.2-51)
 Description: X11 font rasterisation library (development headers)
  libXfont provides various services for X servers, most notably font
  selection and rasterisation (through external libraries).
@@ -85,8 +76,6 @@ Description: X11 font rasterisation library (development headers)
  .
  More information about X.Org can be found at:
  <URL:http://www.X.org>
- <URL:http://xorg.freedesktop.org>
- <URL:http://lists.freedesktop.org/mailman/listinfo/xorg>
  .
  This module can be found at
  git://anongit.freedesktop.org/git/xorg/lib/libXfont
