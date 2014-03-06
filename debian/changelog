@@ -1,3 +1,9 @@
+libxfont (1:1.4.1-4) squeeze-security; urgency=high
+
+  * unlimited sscanf can overflow stack buffer in bdfReadCharacters()
+
+ -- Julien Cristau <jcristau@debian.org>  Thu, 26 Dec 2013 21:36:57 +0100
+
 libxfont (1:1.4.1-3) squeeze-security; urgency=high
 
   * Fix LZW decompression heap corruption (CVE-2011-2895).
