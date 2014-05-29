@@ -1,3 +1,11 @@
+libxfont (1:1.4.1-5) squeeze-security; urgency=high
+
+  * CVE-2014-0209: integer overflow of allocations in font metadata
+  * CVE-2014-0210: unvalidated length fields when parsing xfs protocol replies
+  * CVE-2014-0211: integer overflows calculating memory needs for xfs replies
+
+ -- Julien Cristau <jcristau@debian.org>  Fri, 09 May 2014 11:40:11 +0200
+
 libxfont (1:1.4.1-4) squeeze-security; urgency=high
 
   * unlimited sscanf can overflow stack buffer in bdfReadCharacters()

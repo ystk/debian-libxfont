@@ -1,1 +1,13 @@
 CVE-2013-XXXX-unlimited-sscanf-can-overflow-stack-bu.patch
+0001-CVE-2014-XXXA-integer-overflow-of-realloc-size-in-Fo.patch
+0002-CVE-2014-XXXA-integer-overflow-of-realloc-size-in-le.patch
+0003-CVE-2014-XXXB-unvalidated-length-in-_fs_recv_conn_se.patch
+0004-CVE-2014-XXXB-unvalidated-lengths-when-reading-repli.patch
+0005-CVE-2014-XXXC-Integer-overflow-in-fs_get_reply-_fs_s.patch
+0006-CVE-2014-XXXB-unvalidated-length-fields-in-fs_read_q.patch
+0007-CVE-2014-XXXC-integer-overflow-in-fs_read_extent_inf.patch
+0008-CVE-2014-XXXC-integer-overflow-in-fs_alloc_glyphs.patch
+0009-CVE-2014-XXXB-unvalidated-length-fields-in-fs_read_e.patch
+0010-CVE-2014-XXXB-unvalidated-length-fields-in-fs_read_g.patch
+0011-CVE-2014-XXXB-unvalidated-length-fields-in-fs_read_l.patch
+0012-CVE-2014-XXXB-unvalidated-length-fields-in-fs_read_l.patch
