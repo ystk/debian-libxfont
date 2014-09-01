@@ -2,9 +2,10 @@ Source: libxfont
 Section: x11
 Priority: optional
 Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
-Uploaders: Drew Parsons <dparsons@debian.org>, Cyril Brulebois <kibi@debian.org>
+Uploaders:
+ Drew Parsons <dparsons@debian.org>,
 Build-Depends:
- debhelper (>= 8),
+ debhelper (>= 8.1.3),
  dh-autoreconf,
  quilt,
  pkg-config,
@@ -27,6 +28,9 @@ Section: libs
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Conflicts: xprint (<< 2:1.6.0-1)
+Breaks: xfs (<< 1:1.1.4)
+Pre-Depends: ${misc:Pre-Depends}
+Multi-Arch: same
 Description: X11 font rasterisation library
  libXfont provides various services for X servers, most notably font
  selection and rasterisation (through external libraries).
@@ -50,6 +54,7 @@ Section: debug
 Architecture: any
 Priority: extra
 Depends: ${shlibs:Depends}, ${misc:Depends}, libxfont1 (= ${binary:Version})
+Multi-Arch: same
 Description: X11 font rasterisation library (debug package)
  libXfont provides various services for X servers, most notably font
  selection and rasterisation (through external libraries).

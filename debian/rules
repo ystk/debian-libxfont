@@ -3,6 +3,8 @@
 PACKAGE  = libxfont1
 OOT      = --builddirectory=build
 
+DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
+
 CFLAGS   = $(shell dpkg-buildflags --get CFLAGS)
 CFLAGS  += -Wall
 CPPFLAGS = $(shell dpkg-buildflags --get CPPFLAGS)
@@ -12,12 +14,14 @@ LDFLAGS  = $(shell dpkg-buildflags --get LDFLAGS)
 LDFLAGS := $(LDFLAGS:-Wl,-Bsymbolic-functions=)
 
 CONFFLAGS += \
-	--enable-fc \
+	--disable-fc \
 	--enable-builtins \
 	--enable-pcfformat \
 	--enable-bdfformat \
 	--enable-devel-docs \
 	--without-fop \
+	--disable-silent-rules \
+	--libdir=\$${prefix}/lib/$(DEB_HOST_MULTIARCH) \
 	CFLAGS="$(CFLAGS)" \
 	CPPFLAGS="$(CPPFLAGS)" \
 	LDFLAGS="$(LDFLAGS)"
@@ -46,7 +50,8 @@ override_dh_install:
 	dh_install    -p$(PACKAGE)-udeb --sourcedir=debian/tmp-udeb --fail-missing
 
 override_dh_strip:
-	dh_strip --dbg-package=$(PACKAGE)-dbg
+	dh_strip -p$(PACKAGE) --dbg-package=$(PACKAGE)-dbg
+	dh_strip -N$(PACKAGE)
 
 override_dh_makeshlibs:
 	dh_makeshlibs -V'libxfont1 (>= 1:1.4.2)' --add-udeb=$(PACKAGE)-udeb

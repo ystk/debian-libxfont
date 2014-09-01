@@ -1,3 +1,43 @@
+libxfont (1:1.4.99.901-1) unstable; urgency=medium
+
+  * New upstream release candidate.
+    + includes the CVE-2014-{0209,0210,0211} patches
+  * Remove Cyril from Uploaders.
+  * Allow uscan to verify tarball signature.
+
+ -- Julien Cristau <jcristau@debian.org>  Sat, 12 Jul 2014 17:44:11 +0200
+
+libxfont (1:1.4.7-2) unstable; urgency=high
+
+  * Pull from upstream git to fix FTBFS with new fontsproto (closes: #746052)
+  * CVE-2014-0209: integer overflow of allocations in font metadata
+  * CVE-2014-0210: unvalidated length fields when parsing xfs protocol replies
+  * CVE-2014-0211: integer overflows calculating memory needs for xfs replies
+  * Add breaks on xfs because we broke it by disabling font protocol support
+    in 1.4.7.
+
+ -- Julien Cristau <jcristau@debian.org>  Tue, 13 May 2014 17:25:49 +0200
+
+libxfont (1:1.4.7-1) unstable; urgency=high
+
+  * New upstream release
+    + CVE-2013-6462: unlimited sscanf overflows stack buffer in
+      bdfReadCharacters()
+  * Don't put dbg symbols from the udeb in the dbg package.
+  * dev package is no longer Multi-Arch: same (closes: #720026).
+  * Disable support for connecting to a font server.  That code is horrible and
+    full of holes.
+
+ -- Julien Cristau <jcristau@debian.org>  Tue, 07 Jan 2014 17:51:29 +0100
+
+libxfont (1:1.4.6-1) unstable; urgency=low
+
+  * New upstream release.
+  * Build for multiarch (closes: #654252).  Patch by Riku Voipio, thanks!
+  * Disable silent build rules.
+
+ -- Julien Cristau <jcristau@debian.org>  Mon, 12 Aug 2013 18:28:57 +0200
+
 libxfont (1:1.4.5-2) unstable; urgency=low
 
   * Ease sync for Ubuntu: strip -Bsymbolic-functions from LDFLAGS
