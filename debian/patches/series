@@ -11,3 +11,6 @@ CVE-2013-XXXX-unlimited-sscanf-can-overflow-stack-bu.patch
 0010-CVE-2014-XXXB-unvalidated-length-fields-in-fs_read_g.patch
 0011-CVE-2014-XXXB-unvalidated-length-fields-in-fs_read_l.patch
 0012-CVE-2014-XXXB-unvalidated-length-fields-in-fs_read_l.patch
+CVE-2015-XXXX-1.patch
+CVE-2015-XXXX-2.patch
+CVE-2015-XXXX-3.patch
