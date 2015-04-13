@@ -1,3 +1,14 @@
+libxfont (1:1.5.1-1) unstable; urgency=high
+
+  * New upstream release
+    + bdfReadProperties: property count needs range check [CVE-2015-1802]
+    + bdfReadCharacters: bailout if a char's bitmap cannot be read
+      [CVE-2015-1803]
+    + bdfReadCharacters: ensure metrics fit into xCharInfo struct
+      [CVE-2015-1804]
+
+ -- Julien Cristau <jcristau@debian.org>  Tue, 17 Mar 2015 16:55:21 +0100
+
 libxfont (1:1.4.99.901-1) unstable; urgency=medium
 
   * New upstream release candidate.
